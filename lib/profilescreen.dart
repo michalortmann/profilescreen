@@ -46,7 +46,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     ),
                   ),
                   const Text(
-                    "Kyle",
+                    "Name",
                     style: TextStyle(
                       fontFamily: "Spoof-regular",
                       color: Colors.black87,
@@ -54,9 +54,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     ),
                   ),
                   const Text(
-                    "Programmer",
+                    "Profession",
                     style: TextStyle(
-                      fontFamily: "Montserrat",
+                      fontFamily: "Spoof-regular",
                       color: Colors.black54,
                       fontSize: 16,
                     ),
@@ -85,18 +85,18 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     const Text(
                       "PROFILE",
                       style: TextStyle(
-                        fontFamily: "Montserrat",
+                        fontFamily: "Spoof-regular",
                         color: Colors.black87,
                         fontWeight: FontWeight.bold,
                         fontSize: 20,
                       ),
                     ),
                     const SizedBox(height: 16,),
-                    listProfile(Icons.person, "Full Name", "Kyle Anderson"),
-                    listProfile(Icons.date_range, "Date of Birth", "July 21, 2000"),
-                    listProfile(Icons.location_pin, "Location", "California, United States"),
-                    listProfile(Icons.male, "Gender", "Male"),
-                    listProfile(Icons.phone, "Phone Number", "15555228"),
+                    listProfile(Icons.person, "Full Name", "Your Name"),
+                    listProfile(Icons.date_range, "Date of Birth", "Month XX, XXXX"),
+                    listProfile(Icons.location_pin, "Location", "Adress"),
+                    listProfile(Icons.male, "Gender", "Male/Female"),
+                    listProfile(Icons.phone, "Phone Number", "111 111 111"),
                   ],
                 ),
               ),
@@ -126,7 +126,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 text1,
                 style: const TextStyle(
                   color: Colors.black87,
-                  fontFamily: "Montserrat",
+                  fontFamily: "Spoof-regular",
                   fontSize: 14,
                 ),
               ),
@@ -134,7 +134,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 text2,
                 style: const TextStyle(
                   color: Colors.black87,
-                  fontFamily: "Montserrat",
+                  fontFamily: "Spoof-regular",
                   fontWeight: FontWeight.bold,
                   fontSize: 16,
                 ),
