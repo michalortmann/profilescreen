@@ -11,7 +11,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xffdee2fe),
       body: SizedBox(
         width: double.infinity,
         child: Column(
@@ -25,7 +24,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     height: 120,
                     width: 120,
                     margin: const EdgeInsets.only(
-                      top: 100,
+                      top: 150,
                       bottom: 8,
                     ),
                     decoration: BoxDecoration(
@@ -73,7 +72,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   right: 24,
                 ),
                 decoration: const BoxDecoration(
-                  color: Colors.white,
+                  color: Colors.white54,
                   borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(50),
                     topRight: Radius.circular(50),
@@ -83,12 +82,12 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     const Text(
-                      "PROFILE",
+                      "My profile",
                       style: TextStyle(
                         fontFamily: "Spoof-regular",
                         color: Colors.black87,
                         fontWeight: FontWeight.bold,
-                        fontSize: 20,
+                        fontSize: 40,
                       ),
                     ),
                     const SizedBox(height: 16,),
@@ -97,6 +96,22 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     listProfile(Icons.location_pin, "Location", "Adress"),
                     listProfile(Icons.male, "Gender", "Male/Female"),
                     listProfile(Icons.phone, "Phone Number", "111 111 111"),
+
+                  SizedBox(width: 200,
+                    child: TextButton(onPressed: (){
+                    //code
+                  },
+                      child: Text('Settings', style: TextStyle(color: Colors.blue, fontSize: 25,),),
+                  ),
+                  ),
+                    SizedBox(width: 200,
+                      child: TextButton(onPressed: (){
+                        //code
+                      },
+                        child: Text('Log out', style: TextStyle(color: Colors.red, fontSize: 25,),),
+                      ),
+                    )
+
                   ],
                 ),
               ),
