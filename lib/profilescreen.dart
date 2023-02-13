@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:google_nav_bar/google_nav_bar.dart';
+import 'package:ionicons/ionicons.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({Key? key}) : super(key: key);
@@ -24,7 +26,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     height: 120,
                     width: 120,
                     margin: const EdgeInsets.only(
-                      top: 150,
+                      top: 100,
                       bottom: 8,
                     ),
                     decoration: BoxDecoration(
@@ -64,10 +66,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
               ),
             ),
             Expanded(
-              flex: 5,
+              flex: 6,
               child: Container(
                 padding: const EdgeInsets.only(
-                  top: 20,
+
                   left: 24,
                   right: 24,
                 ),
@@ -90,7 +92,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         fontSize: 40,
                       ),
                     ),
-                    const SizedBox(height: 16,),
+                    const SizedBox(height: 26,),
                     listProfile(Icons.person, "Full Name", "Your Name"),
                     listProfile(Icons.date_range, "Date of Birth", "Month XX, XXXX"),
                     listProfile(Icons.location_pin, "Location", "Adress"),
@@ -101,20 +103,46 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     child: TextButton(onPressed: (){
                     //code
                   },
-                      child: Text('Settings', style: TextStyle(color: Colors.blue, fontSize: 25,),),
+                      child: Text('Settings', style: TextStyle(color: Colors.blue, fontSize: 23,),),
                   ),
                   ),
                     SizedBox(width: 200,
                       child: TextButton(onPressed: (){
                         //code
                       },
-                        child: Text('Log out', style: TextStyle(color: Colors.red, fontSize: 25,),),
+                        child: Text('Log out', style: TextStyle(color: Colors.red, fontSize: 23,),),
                       ),
                     )
 
                   ],
                 ),
               ),
+            ),
+          ],
+        ),
+      ),
+      bottomNavigationBar: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 7.0, vertical: 10),
+        child: GNav(
+          tabBackgroundColor: Colors.grey[300]!,
+          gap: 8,
+          padding: EdgeInsets.all(16),
+          tabs: const [
+            GButton(icon:
+            Ionicons.home_outline,
+            text: 'Home',
+            ),
+            GButton(icon:
+            Ionicons.calendar_outline,
+            text: 'Sheadule',
+            ),
+            GButton(icon:
+            Ionicons.list_outline,
+            text: 'Todos',
+            ),
+            GButton(icon:
+            Ionicons.person_outline,
+            text: 'Profile',
             ),
           ],
         ),
